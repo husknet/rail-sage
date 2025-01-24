@@ -1,24 +1,35 @@
 [package]
-name = "rust-backend"
-version = "0.1.0"
-edition = "2021"
+name = "rust-backend"       # The name of your Rust project
+version = "0.1.0"           # Version of your project
+edition = "2021"            # Rust edition being used
 
 [dependencies]
-# Actix-Web for handling HTTP requests and responses
+# Web framework for handling HTTP requests and responses
 actix-web = "4.0"
 
-# Tera for rendering HTML templates
+# Template engine for rendering HTML templates
 tera = "1.17"
 
-# Reqwest for making HTTP requests to the Python API
-reqwest = { version = "0.11", features = ["json"] }
+# HTTP client for communication with the Python API
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
 
-# Serde for JSON serialization and deserialization
+# JSON serialization and deserialization
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 
-# MaxMindDB for IP geolocation using GeoLite2-Country.mmdb
+# Geolocation using GeoLite2 database
 maxminddb = "0.17"
 
-# Chrono for handling timestamps (used in Telegram notifications)
+# Handling dates and timestamps
 chrono = "0.4"
+
+# Logging for debugging and error tracking
+log = "0.4"
+env_logger = "0.10"
+
+# Optionally, async runtime for efficient async processing
+tokio = { version = "1", features = ["full"] }
+
+[build-dependencies]
+# If needed, support for custom build scripts
+openssl-sys = "0.9.104"
