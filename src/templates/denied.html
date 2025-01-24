@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Denied</title>
+    <style>
+        body {
+            background: #ffe6e6;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .denied-container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .denied-container h1 {
+            font-size: 24px;
+            color: #d9534f;
+            margin-bottom: 20px;
+        }
+
+        .denied-container p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .denied-container a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .denied-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="denied-container">
+        <h1>Access Denied</h1>
+        <p>Your request has been flagged as suspicious.</p>
+        <p>You are visiting from {{ country }}.</p>
+        <p>If you believe this is a mistake, please <a href="mailto:support@example.com">contact support</a>.</p>
+    </div>
+</body>
+</html>
